@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-kalam: 'Kalam', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-comic {
+  font-family: 'Kalam', 'Caveat', cursive;
+}
+
+.font-sans-main {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Comic & Parchment Textures */
+.parchment-pattern {
+  background-color: #f7eee2;
+  background-image: radial-gradient(#d6bc98 0.75px, transparent 0.75px), radial-gradient(#d6bc98 0.75px, #f7eee2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.dark-parchment {
+  background-color: #1a130f;
+  background-image: radial-gradient(#2d1f18 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.comic-halftone {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+/* Custom Scrollbar for playful comic vibe */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a120c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c59f3f;
+  border-radius: 5px;
+  border: 2px solid #1a120c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bd593c;
+}
+
+/* Subtle glowing animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(197, 159, 63, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(189, 89, 60, 0.8));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Comic speech bubble tail */
+.speech-bubble-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble-bottom-dark::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #2a1e16 transparent;
+  display: block;
+  width: 0;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Sūtra-Kośa: Chronicles of the Golden Loom",
+  "description": "An innovative graphic novel book website where animated school children scroll through ancient chapters with interactive illustrations, rotating 3D artifacts, loom weaving, and playful sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
